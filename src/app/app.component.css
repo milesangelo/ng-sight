@@ -2,7 +2,7 @@
     height: 100vh;
     padding-top: 80px;
     position: fixed;
-    background-color: rgb(95, 95, 196);
+    background-color: #382039;
 }
 
 #dashboard {
@@ -10,6 +10,6 @@
 }
 
 #navbar{
-    background-color: rgb(42, 42, 65)!important;
+    background-color: #202040!important;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2), 0 3px 6px rgba(0,0,0,0.2);
 }

@@ -7,9 +7,11 @@
   <div class="row" id="mainContent">
     <app-sidebar 
       id="sidebar" 
-      class="col-sm-3 col-md-2 d-none d-sm-block lg-light sidebar"></app-sidebar> 
+      class="col-sm-3 col-md-2 d-none d-sm-block lg-light sidebar">
+    </app-sidebar> 
+    
     <div class="col-sm-9" id="dashboard">
-      
+         <router-outlet></router-outlet>
     </div>
   </div>
 </div>

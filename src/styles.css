@@ -8,11 +8,11 @@ html {
 }
 
 body {
-    background-color: rgb(240, 234, 226);
+    background-color: #5a3d5c;
 }
 
 a {
-    color: blue;
+    color:#ff6361;
 }
 
 a:hover {
