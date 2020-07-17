@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background-color: #5a3d5c;
+    background-color: #115173;
 }
 
 a {
@@ -20,15 +20,16 @@ a:hover {
 }
 
 .card-theme {
-    background-color: #32407b;
+    background-color: #053f5e;
     border: none;
     border-radius: 2px;
 }
 
 .card-header-theme {
-    background-color: #eee;
+    background-color: #07354e;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+    color: #eee;
     padding: 12px;
 }
 
