@@ -37,6 +37,7 @@ export class PaginationComponent implements OnInit {
   }
 
   totalPages(): number {
+    console.log('Count: ' + this.count + ' Page: ' + this.page)
     return Math.ceil(this.count / this.page) || 0;
   }
 
