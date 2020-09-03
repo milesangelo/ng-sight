@@ -24,10 +24,14 @@ export class SectionOrdersComponent implements OnInit {
   
   getOrders(): void {
     this.messageService.add('section-orders: getting orders');
+    this.messageService.add('section-orders: ' + this.page + '/' + this.limit);
     this._SalesDataService.getOrders(this.page, this.limit)
-      .subscribe(orders => this.orders = orders, () => {
-        this.messageService.add('got orders');
-      });
+      .subscribe(orders => {
+        this.messageService.add('Result from getOrders: ' + orders);
+        this.orders = orders['page']['data'];
+        this.total = this.orders.length;
+        this.messageService.add('Orders totalsize: ' + orders['totalPages']);
+    });
   }
 
   goToPrevious(): void {

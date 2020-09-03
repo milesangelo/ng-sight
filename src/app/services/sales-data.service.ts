@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
 import { ORDERS} from '../mockdata/mock-orders';
 import { Order } from '../shared/order';
 import { MessageService} from './message.service';
+//import 'rxjs/add/operator/map';
+// import { Http } from '@angular/http';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +25,8 @@ export class SalesDataService {
   }
 
   getOrders(pageIndex: number, pageSize: number): Observable<Order[]> {
+    this.log('sales-data-service.getOrders()');
+    return this._http.get<Order[]>('http://localhost:5000/' + this._orderUrl + pageIndex + '/' + pageSize);
     //var msg = 'fetched orders';
     var request = 'http://localhost:5000/' + this._orderUrl;
     

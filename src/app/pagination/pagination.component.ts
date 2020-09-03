@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { MessageService } from '../services/message.service';
 
 @Component({
   selector: 'app-pagination',
@@ -18,7 +19,7 @@ export class PaginationComponent implements OnInit {
   @Output() goPage = new EventEmitter<number>();
   
 
-  constructor() { }
+  constructor(private _messageService: MessageService) { }
 
   ngOnInit(): void {
 
@@ -37,7 +38,7 @@ export class PaginationComponent implements OnInit {
   }
 
   totalPages(): number {
-    console.log('Count: ' + this.count + ' Page: ' + this.page)
+    this._messageService.add('Count: ' + this.count + ' Page: ' + this.page)
     return Math.ceil(this.count / this.page) || 0;
   }
 
